@@ -8,5 +8,5 @@ RUN     apt-get update && apt-get install -y \
         libxml2-dev \
 	libcurl3-dev \
 	libedit-dev
-RUN     docker-php-ext-install mysqli curl gd mcrypt readline mysql
+RUN     docker-php-ext-install mysqli curl gd mcrypt readline mysql pdo
 
