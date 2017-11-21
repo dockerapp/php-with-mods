@@ -10,6 +10,7 @@ RUN     apt-get update && apt-get install -y \
         libpq-dev \
         libxml2-dev \
 	libxslt-dev \
+	ssmtp \
 	&& rm -rf /var/lib/apt/lists/*
 RUN     ln -fs /usr/lib/x86_64-linux-gnu/libldap.so /usr/lib/
 
