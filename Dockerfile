@@ -12,7 +12,6 @@ RUN     apt-get update && apt-get install -y \
         libxml2-dev \
 	libxslt-dev \
 	ssmtp \
-	&& rm -rf /var/lib/apt/lists/* \
 	&& ln -fs /usr/lib/x86_64-linux-gnu/libldap.so /usr/lib/ \
 	&& docker-php-ext-configure gd --with-freetype-dir=/usr/include/ --with-jpeg-dir=/usr/include/ \
 	&& docker-php-ext-install \
