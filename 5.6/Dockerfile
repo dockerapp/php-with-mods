@@ -3,6 +3,7 @@ RUN     apt-get update && apt-get install -y \
         libbz2-dev \
         libcurl3-dev \
         libedit-dev \
+        libfreetype6-dev \
         libjpeg62-turbo-dev \
 	libldap2-dev \
         libmcrypt-dev \
@@ -12,6 +13,6 @@ RUN     apt-get update && apt-get install -y \
 	libxslt-dev \
 	&& rm -rf /var/lib/apt/lists/*
 RUN     ln -fs /usr/lib/x86_64-linux-gnu/libldap.so /usr/lib/
-
-RUN     docker-php-ext-install mysqli curl gd mcrypt readline mysql pdo_mysql ftp iconv json mbstring soap xml xmlreader xmlrpc xmlwriter zip xsl bz2 ldap
+RUN     docker-php-ext-configure gd --with-freetype-dir=/usr/include/ --with-jpeg-dir=/usr/include/  && \ 
+	docker-php-ext-install mysqli curl gd mcrypt readline mysql pdo_mysql ftp iconv json mbstring soap xml xmlreader xmlrpc xmlwriter zip xsl bz2 ldap
 
