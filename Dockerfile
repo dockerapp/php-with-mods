@@ -34,16 +34,16 @@ RUN     apt-get update && apt-get install -y \
 		bz2 \
 		ldap \
 	&& CFLAGS="-I/usr/src/php" docker-php-ext-install xmlreader \
-	&& apt-get purge -y --auto-remove \
-		libbz2-dev \
-		libcurl3-dev \
-		libedit-dev \
-		libfreetype6-dev \
-		libjpeg62-turbo-dev \
-		libldap2-dev \
-		libmcrypt-dev \
-		libpng12-dev \
-		libpq-dev \
-		libxml2-dev \
-		libxslt-dev \
+#	&& apt-get purge -y --auto-remove \
+#		libbz2-dev \
+#		libcurl3-dev \
+#		libedit-dev \
+#		libfreetype6-dev \
+#		libjpeg62-turbo-dev \
+#		libldap2-dev \
+#		libmcrypt-dev \
+#		libpng12-dev \
+#		libpq-dev \
+#		libxml2-dev \
+#		libxslt-dev \
 	&& rm -r /var/lib/apt/lists/*
