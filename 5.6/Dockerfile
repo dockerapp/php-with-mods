@@ -9,6 +9,7 @@ RUN     apt-get update && apt-get install -y \
         libmcrypt-dev \
         libpng-dev \
         libpq-dev \
+	libssl-dev \
         libxml2-dev \
 	libxslt-dev \
 	ssmtp \
@@ -45,6 +46,7 @@ RUN     apt-get update && apt-get install -y \
         libmcrypt-dev \
         libpng-dev \
         libpq-dev \
+	libssl-dev \
         libxml2-dev \
         libxslt-dev 
 RUN	apt-get install \
