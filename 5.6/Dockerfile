@@ -49,7 +49,7 @@ RUN     apt-get update && apt-get install -y \
 	libssl-dev \
         libxml2-dev \
         libxslt-dev 
-RUN	apt-get install \
+RUN	apt-get -y install \
 		libfreetype6 \
 		libjpeg62-turbo \
 		libmcrypt4 \
